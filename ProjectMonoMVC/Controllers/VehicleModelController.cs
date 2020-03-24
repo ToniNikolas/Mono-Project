@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ProjectMonoService.PaginatedList;
-using ProjectMonoService.Strings;
 using ProjectMonoMVC.ViewModels;
-using ProjectMonoService.Models;
-using ProjectMonoService.VehicleInterface;
-using ProjectMonoService.SortFilter;
-using Microsoft.EntityFrameworkCore;
-using ProjectMonoService.ModelsInterface;
+using ProjectMonoService.Functionalities;
+using ProjectMonoService.Interfaces;
 
 namespace ProjectMonoMVC.Controllers
 {

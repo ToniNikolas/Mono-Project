@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectMonoService.SortFilter
+namespace ProjectMonoService.Functionalities
 {
    public class Searching
     {
         public string SearchingString { get; set; }
-        
     }
 }

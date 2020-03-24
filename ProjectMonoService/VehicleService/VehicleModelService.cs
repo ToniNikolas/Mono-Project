@@ -1,14 +1,13 @@
 ﻿using ProjectMonoService.Models;
-using ProjectMonoService.VehicleInterface;
+using ProjectMonoService.Migrations;
+using ProjectMonoService.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
-using ProjectMonoService.SortFilter;
-using ProjectMonoService.PaginatedList;
-using ProjectMonoService.ModelsInterface;
+using ProjectMonoService.Functionalities;
 using AutoMapper;
 
 namespace ProjectMonoService.VehicleService
@@ -33,33 +32,33 @@ namespace ProjectMonoService.VehicleService
             {
                 switch (sorting.SortOrder)
                 {
-                    case Strings.Strings.AbrvAsc:
+                    case Strings.AbrvAsc:
                         vehicles= context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderBy(s => s.Abrv)
-                                 .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                 .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.AbrvDesc:
+                    case Strings.AbrvDesc:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderByDescending(s => s.Abrv)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.NameAsc:
+                    case Strings.NameAsc:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderBy(s => s.VehicleMake.Name)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.NameDesc:
+                    case Strings.NameDesc:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderByDescending(s => s.VehicleMake.Name)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.ModelAsc:
+                    case Strings.ModelAsc:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderBy(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize);
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize);
                         break;
-                    case Strings.Strings.ModelDesc:
+                    case Strings.ModelDesc:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderByDescending(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
                     default:
                         vehicles = context.VehicleModels.Where(s => s.VehicleMake.Name.Contains(searching.SearchingString)).OrderBy(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
                 }
                
@@ -69,33 +68,33 @@ namespace ProjectMonoService.VehicleService
             {
                 switch (sorting.SortOrder)
                 {
-                    case Strings.Strings.AbrvAsc:
+                    case Strings.AbrvAsc:
                         vehicles = context.VehicleModels.OrderBy(s => s.Abrv)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.AbrvDesc:
+                    case Strings.AbrvDesc:
                         vehicles = context.VehicleModels.OrderByDescending(s => s.Abrv)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.NameAsc:
+                    case Strings.NameAsc:
                         vehicles = context.VehicleModels.OrderBy(s => s.VehicleMake.Name)
-                             .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                             .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.NameDesc:
+                    case Strings.NameDesc:
                         vehicles = context.VehicleModels.OrderByDescending(s => s.VehicleMake.Name)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.ModelAsc:
+                    case Strings.ModelAsc:
                         vehicles = context.VehicleModels.OrderBy(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
-                    case Strings.Strings.ModelDesc:
+                    case Strings.ModelDesc:
                         vehicles = context.VehicleModels.OrderByDescending(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
                     default:
                         vehicles = context.VehicleModels.OrderBy(s => s.ModelName)
-                                  .Skip((paging.PageNumber - 1) * Strings.Strings.PageSize).Take(Strings.Strings.PageSize).AsNoTracking();
+                                  .Skip((paging.PageNumber - 1) * Strings.PageSize).Take(Strings.PageSize).AsNoTracking();
                         break;
                 }
                

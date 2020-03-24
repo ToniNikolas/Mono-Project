@@ -1,4 +1,4 @@
-﻿using ProjectMonoService.ModelsInterface;
+﻿using ProjectMonoService.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

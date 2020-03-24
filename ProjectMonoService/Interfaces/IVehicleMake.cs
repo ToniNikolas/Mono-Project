@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectMonoService.ModelsInterface
+namespace ProjectMonoService.Interfaces
 {
    public interface IVehicleMake
     {

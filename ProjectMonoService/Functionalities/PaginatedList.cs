@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectMonoService.PaginatedList
+namespace ProjectMonoService.Functionalities
 {
     public class PaginatedList<T> : List<T>
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectMonoService.Strings
+namespace ProjectMonoService.Functionalities
 {
    public  class Strings
     {

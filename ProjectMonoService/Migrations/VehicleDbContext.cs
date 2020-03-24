@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ProjectMonoService.ModelsInterface;
+using ProjectMonoService.Interfaces;
+using ProjectMonoService.Models;
 
-namespace ProjectMonoService.Models
+namespace ProjectMonoService.Migrations
 {
     public class VehicleDbContext : DbContext
     {
@@ -23,8 +24,6 @@ namespace ProjectMonoService.Models
                 .HasMany(p => p.VehicleModels)
                 .WithOne(p => p.VehicleMake)
                 .HasForeignKey(p => p.MakeId);
-
-
             modelBuilder.Entity<VehicleModel>().ToTable("VehicleModel");
                 
         }

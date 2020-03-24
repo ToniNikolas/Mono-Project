@@ -4696,11 +4696,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoService\\ProjectMonoService.csproj",
+      "projectUniqueName": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoService\\ProjectMonoService.csproj",
       "projectName": "ProjectMonoService",
-      "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoService\\ProjectMonoService.csproj",
+      "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoService\\ProjectMonoService.csproj",
       "packagesPath": "C:\\Users\\tonin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoService\\obj\\",
+      "outputPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

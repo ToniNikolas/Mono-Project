@@ -1,4 +1,4 @@
-﻿using ProjectMonoService.ModelsInterface;
+﻿using ProjectMonoService.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,6 +18,5 @@ namespace ProjectMonoService.Models
         [Required]
         public string Abrv { get; set; }
         public ICollection<VehicleModel> VehicleModels { get; set; }
-
     }
 }

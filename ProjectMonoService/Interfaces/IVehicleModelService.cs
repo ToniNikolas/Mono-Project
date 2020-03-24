@@ -1,14 +1,12 @@
 ﻿using ProjectMonoService.Models;
-using ProjectMonoService.ModelsInterface;
-using ProjectMonoService.PaginatedList;
-using ProjectMonoService.SortFilter;
+using ProjectMonoService.Functionalities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectMonoService.VehicleInterface
+namespace ProjectMonoService.Interfaces
 {
  public interface IVehicleModelService
     {

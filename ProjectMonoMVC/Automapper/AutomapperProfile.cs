@@ -4,7 +4,7 @@ using ProjectMonoMVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ProjectMonoService.ModelsInterface;
+using ProjectMonoService.Interfaces;
 
 namespace ProjectMonoMVC.Automapper
 {

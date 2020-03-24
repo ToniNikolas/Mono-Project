@@ -10,14 +10,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using ProjectMonoService.Models;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using IContainer = Autofac.IContainer;
 using ProjectMonoMVC.Automapper;
-using ProjectMonoService.VehicleInterface;
+using ProjectMonoService.Interfaces;
 using ProjectMonoService.VehicleService;
-using ProjectMonoService.PaginatedList;
+using ProjectMonoService.Functionalities;
+using ProjectMonoService.Migrations;
 
 namespace ProjectMonoMVC
 {

@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProjectMonoMVC.ViewModels;
-using ProjectMonoService.Strings;
-using ProjectMonoService.PaginatedList;
+using ProjectMonoService.Functionalities;
 using Microsoft.EntityFrameworkCore;
-using ProjectMonoService.Models;
-using ProjectMonoService.VehicleInterface;
-using ProjectMonoService.SortFilter;
-using ProjectMonoService.ModelsInterface;
+using ProjectMonoService.Interfaces;
 
 namespace ProjectMonoMVC.Controllers
 {
@@ -73,7 +68,7 @@ namespace ProjectMonoMVC.Controllers
             if (ModelState.IsValid)
                 {
                   var create = mapper.Map<IVehicleMake>(vehicle);
-                  await   service.InsertMake(create); 
+                  await service.InsertMake(create); 
                   return RedirectToAction("Index");
                 }
            

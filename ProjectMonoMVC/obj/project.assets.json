@@ -12719,11 +12719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoMVC\\ProjectMonoMVC.csproj",
+      "projectUniqueName": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoMVC\\ProjectMonoMVC.csproj",
       "projectName": "ProjectMonoMVC",
-      "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoMVC\\ProjectMonoMVC.csproj",
+      "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoMVC\\ProjectMonoMVC.csproj",
       "packagesPath": "C:\\Users\\tonin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoMVC\\obj\\",
+      "outputPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12742,8 +12742,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoService\\ProjectMonoService.csproj": {
-              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project-master\\ProjectMonoService\\ProjectMonoService.csproj"
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoService\\ProjectMonoService.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\provjera\\Mono-Project\\ProjectMonoService\\ProjectMonoService.csproj"
             }
           }
         }
